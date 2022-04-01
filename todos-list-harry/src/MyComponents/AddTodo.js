@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export const AddTodo = (props) => {
+export const AddTodo = ({addTodo}) => {
     const [title, settitle] = useState("");
     const [desc, setdesc] = useState("");
 
@@ -10,7 +10,7 @@ export const AddTodo = (props) => {
             alert("Title or Description cannot be blank");
         }
         else{
-            props.addTodo(title, desc);
+            addTodo(title, desc);
             settitle("");
             setdesc("");
         }
