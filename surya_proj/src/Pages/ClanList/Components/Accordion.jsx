@@ -1,11 +1,15 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { Link } from 'react-router-dom';
 import { Sidebar } from 'flowbite-react/lib/esm/components';
+import ContentContext from '../../../Context/ContentContext';
+import ClanContent from '../Content/ClanContent';
 
 
 
 
 const AccordionComponent = (props) => {
+    const lang = useContext(ContentContext)[0];
+    const currentLang = ClanContent[lang];
 
     const title = props.Title;
     const clanNo = props.ClanNumber;
@@ -24,10 +28,9 @@ const AccordionComponent = (props) => {
                         <Sidebar.Items>
                             <Sidebar.ItemGroup>
                                 <Sidebar.Item
-                                    to="#"
-                                    onClick=""
+                                    to="#"    
                                 >
-                                <Link to="" className='' onClick=''>Ahirrao</Link> 
+                                <label>1. {`${currentLang.Ahirrao.Title}`}</label> 
                                 </Sidebar.Item>
                                 <Sidebar.Item
                                     to="#"
