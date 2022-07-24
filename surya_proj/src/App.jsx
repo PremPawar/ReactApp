@@ -18,7 +18,7 @@ function App() {
 				<Route path='/clanlist' element={<ClanList />} />
 				{/* <Route path='/about' element={<ClanList />} /> */}
 			</Routes>
-			<FooterPage />
+			{/* <FooterPage /> */}
 		</ContentContext.Provider>
 
 
