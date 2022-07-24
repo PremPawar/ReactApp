@@ -4,7 +4,7 @@ import './App.css'
 import Navbar from './Components/Navbar';
 import Home from './Pages/Home';
 import ContentContext from './Context/ContentContext';
-import Footer from './Components/Footer';
+import FooterPage from './Components/Footer';
 import ClanList from './Pages/ClanList/ClanList';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
 				<Route path='/clanlist' element={<ClanList />} />
 				{/* <Route path='/about' element={<ClanList />} /> */}
 			</Routes>
-			<Footer />
+			<FooterPage />
 		</ContentContext.Provider>
 
 

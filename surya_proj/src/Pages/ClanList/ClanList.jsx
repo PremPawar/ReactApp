@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ToggleContent from './Toggle/ToggleContent';
 import ContentContext from '../../Context/ContentContext';
 import ClanContent from './Content/ClanContent';
-import { Accordion } from 'flowbite-react';
+import AccordionComponent from './Components/Accordion';
 
 const ClanList = () => {
     const lang = useContext(ContentContext)[0];
@@ -20,95 +20,9 @@ const ClanList = () => {
                 - प्रा.आ.रा.कदम
                 </p>
                 <ToggleContent />
-                <Accordion alwaysOpen={true} >
-                    <Accordion.Panel>
-                        <Accordion.Title>
-                            <p className='text-2xl'>1. {`${currentLang.Ahirrao.Title}`}</p>
-                        </Accordion.Title>
-                        <Accordion.Content>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                <span className='font-bold'>Title : </span>
-                                {`${currentLang.Ahirrao.Title}`} 
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                <span className='font-bold'>Clan Number : </span>
-                                {`${currentLang.Ahirrao.ClanNumber}`} 
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                <span className='font-bold'>Sub-Clans : </span>
-                                {`${currentLang.Ahirrao.SubClan}`} 
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                <span className='font-bold'>Vansh : </span>
-                                {`${currentLang.Ahirrao.Vansh}`} 
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                <span className='font-bold'>Gotra : </span>
-                                {`${currentLang.Ahirrao.Gotra}`} 
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                <span className='font-bold'>Kuldaivata : </span>
-                                {`${currentLang.Ahirrao.Kuldaivat}`} 
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                <span className='font-bold'>Mantra : </span>
-                                {`${currentLang.Ahirrao.Mantra}`} 
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                <span className='font-bold'>RularKing Or Title : </span>
-                                {`${currentLang.Ahirrao.RularKingOrTitle}`} 
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                <span className='font-bold'>ClanPlace : </span>
-                                {`${currentLang.Ahirrao.ClanPlace}`} 
-                            </p>
-                        </Accordion.Content>
-                    </Accordion.Panel>
-
-                    <Accordion.Panel>
-                        <Accordion.Title>
-                            <p className='text-2xl'>2. {`${currentLang.Angre.Title}`}</p>
-                        </Accordion.Title>
-                        <Accordion.Content>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                <span className='font-bold'>Title : </span>
-                                {`${currentLang.Angre.Title}`} 
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                <span className='font-bold'>Clan Number : </span>
-                                {`${currentLang.Angre.ClanNumber}`} 
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                <span className='font-bold'>Sub-Clans : </span>
-                                {`${currentLang.Angre.SubClan}`} 
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                <span className='font-bold'>Vansh : </span>
-                                {`${currentLang.Angre.Vansh}`} 
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                <span className='font-bold'>Gotra : </span>
-                                {`${currentLang.Angre.Gotra}`} 
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                <span className='font-bold'>Kuldaivata : </span>
-                                {`${currentLang.Angre.Kuldaivat}`} 
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                <span className='font-bold'>Mantra : </span>
-                                {`${currentLang.Angre.Mantra}`} 
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                <span className='font-bold'>RularKing Or Title : </span>
-                                {`${currentLang.Angre.RularKingOrTitle}`} 
-                            </p>
-                            <p className="mb-2 text-gray-500 dark:text-gray-400">
-                                <span className='font-bold'>ClanPlace : </span>
-                                {`${currentLang.Angre.ClanPlace}`} 
-                            </p>
-                        </Accordion.Content>
-                    </Accordion.Panel>
-                </Accordion>
+                <AccordionComponent Title={`${currentLang.Ahirrao.Title}`} ClanNumber={`${currentLang.Ahirrao.ClanNumber}`} SubClan={`${currentLang.Ahirrao.SubClan}`} Vansh={`${currentLang.Ahirrao.Vansh}`} Gotra={`${currentLang.Ahirrao.Gotra}`} Kuldaivat={`${currentLang.Ahirrao.Kuldaivat}`} Mantra={`${currentLang.Ahirrao.Mantra}`} RularKingOrTitle={`${currentLang.Ahirrao.RularKingOrTitle}`} ClanPlace={`${currentLang.Ahirrao.ClanPlace}`}/>
+                <AccordionComponent Title={`${currentLang.Angre.Title}`} ClanNumber={`${currentLang.Angre.ClanNumber}`} SubClan={`${currentLang.Angre.SubClan}`} Vansh={`${currentLang.Angre.Vansh}`} Gotra={`${currentLang.Angre.Gotra}`} Kuldaivat={`${currentLang.Angre.Kuldaivat}`} Mantra={`${currentLang.Angre.Mantra}`} RularKingOrTitle={`${currentLang.Angre.RularKingOrTitle}`} ClanPlace={`${currentLang.Angre.ClanPlace}`}/>
+                <AccordionComponent Title={`${currentLang.Angane.Title}`} ClanNumber={`${currentLang.Angane.ClanNumber}`} SubClan={`${currentLang.Angane.SubClan}`} Vansh={`${currentLang.Angane.Vansh}`} Gotra={`${currentLang.Angane.Gotra}`} Kuldaivat={`${currentLang.Angane.Kuldaivat}`} Mantra={`${currentLang.Angane.Mantra}`} RularKingOrTitle={`${currentLang.Angane.RularKingOrTitle}`} ClanPlace={`${currentLang.Angane.ClanPlace}`}/>
             </div>
         </>
 

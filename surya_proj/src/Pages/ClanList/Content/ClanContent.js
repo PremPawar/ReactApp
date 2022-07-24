@@ -15,7 +15,7 @@ const ClanContent = {
         Angre: {
             Title: "Angre",
             ClanNumber: 2,
-            SubClan: "Will Update soon...",
+            SubClan: "Akantak, Akaral, Akral, Abhir, Aamle, Aaraj, Aatole, Akante, Adhau, Avaghad, Aramale, Aakhare, Aadan, Idhate, Ede, Airav, Kathale, Karnale, Gangale, Gurave, Dhome, Ghodchadhe, Ghokel Charhate, Charape, Jagajethe, Jagdambare, Jagbhande, Jangale, Junaghare, Junade, Jubbare, Zhadokar, Tale, Tole, Davare, Dabare, Domane, Dhakane, Vedache, Padapathe, Padole, Pannase, Proctak, Bali, Baliye, Bhilkar, Mulmule, Shimare, Shire, Haipkar, Date, Jagethe, Padashele, Bhikar, Bhusagale, Irave, Ekare, Ekhande",
             Vansh: "Chandra",
             Gotra: "Gargya",
             Kuldaivat: "Uma-Maheshwar",
@@ -23,6 +23,18 @@ const ClanContent = {
             Mantra: "Gaiyatri Mantra",
             RularKingOrTitle: "Ravivarma (Kadamba)",
             ClanPlace: "Konkan (17th Century)",
+        },
+        Angane: {
+            Title: "Angane",
+            ClanNumber: 3,
+            SubClan: "Will Update soon...",
+            Vansh: "Chandra",
+            Gotra: "Durvas",
+            Kuldaivat: "Bhavani",
+            VictoryWeapon: "Sword(Talwar) , Kalamb in Marriges",
+            Mantra: "Gaiyatri Mantra",
+            RularKingOrTitle: "Induvarma (Indravarma Kadamba)",
+            ClanPlace: "Kandahar, Vanvasi, Gove, Palashika (North Kannada)",
         }
     },
     Marathi: {
@@ -50,6 +62,18 @@ const ClanContent = {
             RularKingOrTitle: "रविवर्मा (कदंब)",
             ClanPlace: "कोंकण (१७वे शतक)",
 
+        },
+        Angane: {
+            Title: "आंगणे",
+            ClanNumber: "३",
+            SubClan: "Will Update soon...",
+            Vansh: "चंद्र",
+            Gotra: "दुर्वास",
+            Kuldaivat: "भवानी",
+            VictoryWeapon: "तलवार , लग्नामध्ये कळंब",
+            Mantra: "गायत्री मंत्र",
+            RularKingOrTitle: "इन्दूवर्मा (इंद्रवर्मा कदंब)",
+            ClanPlace: "कंदहार, वनवासी, गोवे, पलाशिका (उत्तर कानडा)",
         }
 
     }

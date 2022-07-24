@@ -1,36 +1,34 @@
 import React from 'react'
+import { Footer } from 'flowbite-react'
 
-const Footer = () => {
+const FooterPage = () => {
     return (
-        <div>
+        <Footer container={true}>
+            <div className="w-full text-center">
+                <div className="w-full justify-between sm:flex sm:items-center sm:justify-between">
+                    <Footer.Brand
+                        href="/"
+                        name="Kshatriya Mahratta"
+                    />
+                    <Footer.LinkGroup>
+                        <Footer.Link href="#">
+                            About
+                        </Footer.Link>
 
-            <footer className="p-2 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-900">
-                <div className="sm:flex sm:items-center sm:justify-between">
-                    <a className="flex items-center mb-2 sm:mb-0">
-                            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Kshatriya Mahratta</span>
-                    </a>
-                    <ul className="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
-                        <li>
-                            <a href="#" className="mr-4 hover:underline md:mr-6 ">About</a>
-                        </li>
-                        <li>
-                            <a href="#" className="mr-4 hover:underline md:mr-6">Privacy Policy</a>
-                        </li>
-                        {/* <li>
-                            <a href="#" className="mr-4 hover:underline md:mr-6 ">Licensing</a>
-                        </li> */}
-                        <li>
-                            <a href="#" className="hover:underline">Contact</a>
-                        </li>
-                    </ul>
+                        <Footer.Link href="#">
+                            Contact
+                        </Footer.Link>
+                    </Footer.LinkGroup>
                 </div>
-                <hr className="my-4 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-4" />
-                    <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="" className="hover:underline">Design and Developed by Prem Pawar</a>. <br></br>All Rights Reserved.
-                    </span>
-            </footer>
-
-        </div>
+                <Footer.Divider />
+                <Footer.Copyright
+                    href="#"
+                    by=" Design and Developed by PREM PAWAR"
+                    year={2022}
+                />
+            </div>
+        </Footer>
     )
 }
 
-export default Footer
+export default FooterPage;
