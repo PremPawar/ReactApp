@@ -6,7 +6,7 @@ const ToggleContent = () => {
 
     return (
         <>
-            <div className='text-center p-4 text-2xl'>
+            <div className='text-end p-4 text-2xl'>
                 <label htmlFor="default-toggle" className="inline-flex relative items-center cursor-pointer">
                     <input type="checkbox" value="" id="default-toggle" className="sr-only peer" 
                     onClick={() => {
