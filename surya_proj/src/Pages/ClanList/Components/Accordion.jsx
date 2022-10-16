@@ -1,40 +1,22 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Sidebar } from 'flowbite-react/lib/esm/components';
-// import Display from './Display';
+import Display from './Display';
 import ContentContext from '../../../Context/ContentContext';
 import ClanContent from '../Content/ClanContent';
 import ToggleContent from '../Toggle/ToggleContent';
-import ToggleButton from '../../../Components/ToggleButton';
-import { render } from 'react-dom';
+import ClanContext from '../../../Context/ClanContext';
+// import ToggleButton from '../../../Components/ToggleButton';
 
 
 
 
-const AccordionComponent = (props) => {
-    const lang = useContext(ContentContext)[0];
-    const currentLang = ClanContent[lang];
 
-    const [name, setName] = useState("");
+const AccordionComponent = () => {
+    // const lang = useContext(ContentContext)[0];
+    // const currentLang = ClanContent[lang];
 
-    
-    var title = JSON.stringify(ClanContent)
-    const final_title = (`${title}`);
-    console.log(final_title)
-   
-    const clanNo = "{`${" + currentLang + name + "ClanNumber}`}";
-    const subClan = "{`${" + currentLang + name + "ClanNumber}`}";
-    const vansh = "{`${" + currentLang + name + "ClanNumber}`}";
-    const gotra = "{`${" + currentLang + name + "ClanNumber}`}";
-    const kuldaivat = "{`${" + currentLang + name + "ClanNumber}`}";
-    const victory = "{`${" + currentLang + name + "ClanNumber}`}";
-    const mantra = "{`${" + currentLang + name + "ClanNumber}`}";
-    const rular = "{`${" + currentLang + name + "ClanNumber}`}";
-    const clanPlace = "{`${" + currentLang + name + "ClanNumber}`}";
-
-
-
-
+    const [name, setName] = useContext(ClanContext);
 
 
 
@@ -49,7 +31,7 @@ const AccordionComponent = (props) => {
                                     to=""
                                 >
                                     <button onClick={() => {
-                                        setName("Ahirrao");
+                                        setName(name == "Ahirrao" ? "Ahirrao" : "Ahirrao");
                                     }}
                                     >Ahirrao</button>
                                 </Sidebar.Item>
@@ -57,12 +39,19 @@ const AccordionComponent = (props) => {
                                     to="#"
                                     labelColor="alternative"
                                 >
-                                    <button onClick={() => setName("Angre")} >Angre</button>
+                                    <button onClick={() => {
+                                        setName(name == "" ? "Angre" : "Angre")
+                                    }}
+                                    >Angre</button>
                                 </Sidebar.Item>
                                 <Sidebar.Item
                                     to="#"
                                 >
-                                    Inbox
+
+                                    <button onClick={() => {
+                                        setName(name == "" ? "Aangane" : "Aangane")
+                                    }}
+                                    >Aangane</button>
                                 </Sidebar.Item>
                                 <Sidebar.Item
                                     to="#"
@@ -156,7 +145,8 @@ const AccordionComponent = (props) => {
 
 
             </div>
-            <div className='relative mx-auto my-auto p-3 h-screen w-full bg-blue-200 '>
+            <Display Value={name}/>
+            {/* <div className='relative mx-auto my-auto p-3 h-screen w-full bg-blue-200 '>
 
                 <ToggleContent />
 
@@ -176,7 +166,7 @@ const AccordionComponent = (props) => {
                         <div className="flex flex-row sm:flex-row md:flex-row text-start mt-20">
                             <h3 className="text-2xl  font-bold mb-1 opacity-75">Title : </h3>
                             <p className="text-xs mt-0 mb-2 text-slate-400 font-bold">
-                                <i className=" text-2xl fas fa-map-marker-alt mr-2 text-slate-400 opacity-95">{final_title}</i>
+                                <i className=" text-2xl fas fa-map-marker-alt mr-2 text-slate-400 opacity-95">{}</i>
                             </p>
                         </div>
                         <div className="mt-6 py-3 border-t border-slate-200 text-center"></div>
@@ -185,8 +175,7 @@ const AccordionComponent = (props) => {
                                 Clan Number :
                             </div>
                             <div className=" mr-2 text-xs font-bold text-slate-400 opacity-55 uppercase">
-                                {clanNo}
-
+                                {`${currentLang}.${props.Name}.ClanNumber`}
                             </div>
                         </div>
                         <div className="flex flex-row h-auto space-x-2 sm:flex-col md:flex-row xl:flex-row items-center mb-2">
@@ -194,7 +183,7 @@ const AccordionComponent = (props) => {
                                 Sub-Clans :
                             </div>
                             <div className=" mr-2 text-xs font-bold text-slate-400 opacity-55 uppercase">
-                                {subClan}
+                            {`${currentLang}.${props.Name}.ClanNumber`}
                             </div>
                         </div>
                         <div className="flex flex-row h-auto space-x-2 sm:flex-col md:flex-row xl:flex-row items-center mb-2">
@@ -202,7 +191,7 @@ const AccordionComponent = (props) => {
                                 Vansh :
                             </div>
                             <div className=" mr-2 text-xs font-bold text-slate-400 opacity-55 uppercase">
-                                {vansh}
+                            {`${currentLang}.${props.Name}.ClanNumber`}
                             </div>
                         </div>
                         <div className="flex flex-row h-auto space-x-2 sm:flex-col md:flex-row xl:flex-row items-center mb-2 ">
@@ -210,7 +199,7 @@ const AccordionComponent = (props) => {
                                 Gotra :
                             </div>
                             <div className=" mr-2 text-xs font-bold text-slate-400 opacity-55 uppercase">
-                                {gotra}
+                            {`${currentLang}.${props.Name}.ClanNumber`}
                             </div>
                         </div>
                         <div className="flex flex-row h-auto space-x-2 sm:flex-col md:flex-row xl:flex-row items-center mb-2 ">
@@ -218,7 +207,7 @@ const AccordionComponent = (props) => {
                                 Kuldeivat :
                             </div>
                             <div className=" mr-2 text-xs font-bold text-slate-400 opacity-55 uppercase">
-                                {kuldaivat}
+                            {`${currentLang}.${props.Name}.ClanNumber`}
                             </div>
                         </div>
                         <div className="flex flex-row h-auto space-x-2 sm:flex-col md:flex-row xl:flex-row items-center mb-2 ">
@@ -226,7 +215,7 @@ const AccordionComponent = (props) => {
                                 Victory Weapon :
                             </div>
                             <div className=" mr-2 text-xs font-bold text-slate-400 opacity-55 uppercase">
-                                {victory}
+                            {`${currentLang}.${props.Name}.ClanNumber`}
                             </div>
                         </div>
                         <div className="flex flex-row h-auto space-x-2 sm:flex-col md:flex-row xl:flex-row items-center mb-2 ">
@@ -234,7 +223,7 @@ const AccordionComponent = (props) => {
                                 Mantra :
                             </div>
                             <div className=" mr-2 text-xs font-bold text-slate-400 opacity-55 uppercase">
-                                {mantra}
+                            {`${currentLang}.${props.Name}.ClanNumber`}
                             </div>
                         </div>
                         <div className="flex flex-row h-auto space-x-2 sm:flex-col md:flex-row xl:flex-row items-center mb-2">
@@ -242,7 +231,7 @@ const AccordionComponent = (props) => {
                                 RularKingOrTitle :
                             </div>
                             <div className=" mr-2 text-xs font-bold text-slate-400 opacity-55 uppercase">
-                                {rular}
+                            {`${currentLang}.${props.Name}.ClanNumber`}
                             </div>
                         </div>
                         <div className="flex flex-row h-auto space-x-2 sm:flex-col md:flex-row xl:flex-row items-center mb-2">
@@ -250,12 +239,12 @@ const AccordionComponent = (props) => {
                                 Clan Place :
                             </div>
                             <div className=" mr-2 text-xs font-bold text-slate-400 opacity-55 uppercase">
-                                {clanPlace}
+                            {`${currentLang}.${props.Name}.ClanNumber`}
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
         </div>
 
